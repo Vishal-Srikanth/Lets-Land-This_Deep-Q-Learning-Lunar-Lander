@@ -2,6 +2,11 @@
 
 An end-to-end reinforcement learning project that trains a **Deep Q-Network (DQN)** agent to master the Gymnasium `LunarLander-v3` environment from scratch, featuring production-optimized memory management and comprehensive multi-dimensional visual analytics.
 
+<!-- Centered Demo GIF Preview -->
+<p align="center">
+  <img src="solved_landing_demo.gif" alt="Autonomous Lunar Lander Success Demo" width="600px">
+</p>
+
 ---
 
 ## Key Engineering Highlights
