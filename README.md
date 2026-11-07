@@ -24,7 +24,7 @@ Developed by the Farama Foundation, [Gymnasium](https://gymnasium.farama.org/) p
 
 * **State Space (8 Continuous Variables):** $(x, y)$ coordinates, linear velocities $(v_x, v_y)$, lander angle $\theta$, angular velocity $\omega$, and two boolean ground-contact leg flags.
 * **Action Space (4 Discrete Actions):** Do nothing (`0`), fire left orientation engine (`1`), fire main vertical thruster (`2`), and fire right orientation engine (`3`).
-* **Success Criterion ($\ge 200.0$):** Officially solved when the running average score of the last 100 episodes reaches or exceeds **200.0**[cite: 36].
+* **Success Criterion ($\ge 200.0$):** Officially solved when the running average score of the last 100 episodes reaches or exceeds **200.0**.
 
 ---
 
@@ -45,15 +45,20 @@ $$Q_{target}(s, a) = r + \gamma \max_{a'} Q_{target}(s', a')$$
 *(where discount factor $\gamma = 0.99$ prioritizes long-term landing stability over immediate rewards).*
 
 ### 5. Exploration-Exploitation Tradeoff ($\epsilon$-Greedy)
-The agent balances exploration and exploitation using an $\epsilon$-greedy policy where $\epsilon$ decays exponentially from `1.0` down to `0.01` (`0.995` decay rate), transitioning the agent from curious explorer to precise pilot[cite: 36].
+The agent balances exploration and exploitation using an $\epsilon$-greedy policy where $\epsilon$ decays exponentially from `1.0` down to `0.01` (`0.995` decay rate), transitioning the agent from curious explorer to precise pilot.
 
 ---
 
 ## Training Results & Performance Summary
 
-* **Total Episodes to Solve:** 689 episodes[cite: 38]
-* **Final Exploration Rate ($\epsilon$):** 0.032[cite: 38]
+* **Total Episodes to Solve:** 689 episodes
+* **Final Exploration Rate ($\epsilon$):** 0.032
 * **Final Performance:** Consistent positive scoring exceeding the +200 threshold, proving robust landing mastery.
+
+<!-- Centered Demo GIF Preview -->
+<p align="center">
+  <img src="lunar_learning_trajectory.gif" alt="Lunar Lander Learning Trajectory" width="600px">
+</p>
 
 ---
 
